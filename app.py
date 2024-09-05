@@ -24,7 +24,7 @@ with upload_container:
     st.write("Upload your IoCs Here")
 
     uploaded_files = st.file_uploader(
-        # label="Upload IoCs",
+        label="Upload IoCs",
         type=["txt", "doc", "docx"],
         accept_multiple_files=True,
         help="This is the file upload tooltip",
