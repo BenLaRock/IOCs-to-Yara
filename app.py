@@ -3,7 +3,8 @@ import os
 import re
 
 # Constants and Variables
-IPV4_REGEX_PATTERN = r"(\b([0-9]{1,3}\.{0,1}){4}(\:{1}[0-9]{1,5}){0,1}\b)" # "dumb" (no validation), also handles 1-5 digit port suffixes
+# Non-validating pattern IPv4s including defanged addresses with optional 1-5 port suffix
+IPV4_REGEX_PATTERN = r"(\b([0-9]{1,3}(\.|\[\.\]){0,1}){4}(\:{1}[0-9]{1,5}){0,1}\b)"
 MD5_REGEX_PATTERN = r"(\b[0-9a-f]{32}\b)"
 
 uploaded_files = []
